@@ -1,0 +1,37 @@
+.slick-slider {
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+.slick-slide {
+    width: 100vw;
+    // max-height: 900px;
+    position: relative;
+    color: black;
+}
+
+.slick-list {
+    padding-bottom: 60px
+}
+
+.slick-track {
+    padding-top: 50px;
+}
+
+.slick-dots {
+    bottom: 10px;
+
+    li {
+        border: 1px solid #32A8FB;
+        border-radius: 50%;
+
+        &.slick-active {
+            background: linear-gradient(270deg, #1DE4CC 0%, #32A8FB 100%);
+        }
+
+        button::before {
+            display: none;
+            opacity: 0;
+        }
+    }
+}

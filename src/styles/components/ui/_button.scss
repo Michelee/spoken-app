@@ -1,0 +1,34 @@
+@import '../../breakpoints';
+.Button {
+    background: transparent;
+    outline: none;
+    border: 2px solid white;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 40px;
+    text-transform: uppercase;
+    padding: 0 10px;
+    text-decoration: none;
+    cursor: pointer;
+
+    @include breakpoint('medium') {
+        padding: 5px 15px;
+    }
+
+    &.wider {
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+
+    &.blue {
+        background: linear-gradient(270deg, #1DE4CC 0%, #32A8FB 100%);
+        border: none;
+        font-size: 14px;
+        padding: 15px 20px;
+        @include breakpoint('medium') {
+            font-size: 16px;
+        }
+    }
+}

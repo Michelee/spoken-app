@@ -1,0 +1,112 @@
+@import '../../common/_breakpoints.scss';
+
+.footer {
+  color: white;
+  background: linear-gradient(180deg, #32A8FB 0%, #1DE4CC 100%);
+  padding: 3em 5em 2em;
+  text-align: center;
+  
+  @media screen and (max-width: $screen-sm){
+    padding: 3em 1em 2em;
+  }
+
+  .contact-container {
+    .contact-form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2em 0 5em;
+      margin: 0 auto;
+
+      @media screen and (max-width: $screen-sm){
+        flex-direction: column;
+        padding: 2em 0 3em;
+      }
+
+      input {
+        border: 2px solid #FFFFFF;
+        border-radius: 3em;
+        height: 100%;
+        padding: 12px 25px;
+        background: transparent;
+        color: white;
+        outline: 0;
+        margin-right: 12px;
+        width: 500px;
+
+        @media screen and (max-width: $screen-sm){
+          width: 100%;
+          margin-right: 0;
+        }
+
+        &::placeholder {
+          color: white;
+        }
+      }
+
+      button {
+        background-color: #FFFFFF;
+        border-color: #FFFFFF;
+        border-radius: 3em;
+        height: 50px;
+        width: 185px;
+        color: #58595B;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+        outline: 0;
+
+        @media screen and (max-width: $screen-sm){
+          width: 50%;
+          margin-top: 1em;
+          height: 35px;
+        }
+      }
+    }
+  }
+
+  .inline-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .spoken-logo {
+      width: 150px;
+      height: auto;
+    }
+
+    small,
+    .social-media {
+      width: 168px;
+    }
+
+    .social-media {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      svg {
+        margin-left: 0.5em;
+      }
+    }
+
+    @media screen and (max-width: $screen-sm){
+      flex-direction: column-reverse;
+      align-items: center;
+
+      .spoken-logo {
+        order: 1;
+        width: 100px;
+      }
+
+      .social-media { 
+        width: initial;
+
+        svg {
+          margin: 0.5em 0.5em 0.5em 0;
+          width: 20px;
+          height: auto;
+        }
+      }
+    }
+  }
+}

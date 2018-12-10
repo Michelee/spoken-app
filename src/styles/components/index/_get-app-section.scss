@@ -1,0 +1,46 @@
+@import '../../common/_breakpoints.scss';
+
+.get-app-section-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 4.5em 0;
+
+  @media screen and (max-width: $screen-sm){
+    flex-direction: column;
+    text-align: center;
+    padding: 4.5em 1em;
+  }
+
+  .right-container,
+  .left-container {
+    width: 50%;
+
+    @media screen and (max-width: $screen-sm){
+      width: 100%;
+    }
+  }
+
+  .right-container {
+    p {
+      max-width: 500px;
+    }
+  }
+
+  .left-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 500px;
+      height: auto;
+      margin: 0 2em 0 auto;
+
+      @media screen and (max-width: $screen-sm){
+        margin: 0 0 1em;
+      }
+    }
+  }
+}

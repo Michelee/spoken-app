@@ -1,0 +1,264 @@
+@import '../breakpoints';
+.BackgroundContainer {
+    position: relative;
+    background: lightblue;
+    height: 60vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../../images/becomecoachbg.jpg");
+    padding: 2em 1.5em;
+
+    @include breakpoint('medium') {
+        height: 100vh;
+        padding: 4em 7em;
+    }
+}
+
+.background-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    span {
+        width: 150px;
+
+        svg {
+            width: 100%;
+        }
+        @include breakpoint('medium') {
+            width: 193px;
+        }
+    }
+}
+
+.background-title-container {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+
+    @include breakpoint('medium') {
+        width: 100%;
+        max-width: 600px;
+    }
+    .title {
+        font-size: 28px;
+        font-weight: normal;
+
+        @include breakpoint('medium') {
+            font-size: 38px;;
+        }
+    }
+
+    .title span{
+        font-weight: bold;
+    }
+
+    .description {
+        font-size: 16px;
+
+        @include breakpoint('medium') {
+            font-size: 18px;
+        }
+    }
+}
+
+.section-title {
+    font-size: 28px;
+    color: #58595B;
+    text-align: center;
+    margin: 0 auto 20px;
+    font-family: 'Montserrat', sans-serif;
+
+    @include breakpoint('medium') {
+        font-size: 38px;
+    }
+
+    &.white {
+        color: white;
+    }
+}
+
+.CoachOverview {
+    background: white;
+    padding: 60px 10% 0;
+
+    .overview-main-description {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        color: #58595B;
+        max-width: 700px;
+        margin: 0 auto 60px;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .overview-row {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        max-width: 900px;
+        margin-bottom: 10px;
+        flex-direction: column;
+        @include breakpoint('medium') {
+            flex-direction: row;
+            margin-bottom: 60px;
+        }
+    }
+
+    .overview-row .overview-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include breakpoint('medium') {
+            align-items: flex-start;
+            flex-direction: row;
+        }
+
+        .icon {
+            margin-right: 0px;
+            @include breakpoint('medium') {
+                margin-right: 50px;
+            }
+        }
+        .overview-item {
+            padding-top: 10px;
+            display: flex;
+            flex-direction: column;
+            @include breakpoint('medium') {
+                max-width: 200px;
+            }
+        }
+    }
+
+    .overview-item .overview-title {
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+        color: #58595B;
+        font-size: 18px;
+        text-align: center;
+        @include breakpoint('medium') {
+            text-align: left;
+        }
+    }
+
+    .overview-item .overview-description {
+        font-family: 'Montserrat', sans-serif;
+        color: #58595B;
+        font-size: 16px;
+        font-weight: 300;
+        text-align: center;
+        @include breakpoint('medium') {
+            text-align: left;
+        }
+    }
+}
+
+.CoachesTestimonials {
+    background: rgba(156, 156, 158, 0.1);
+    padding: 60px 0;
+    .testimonials-container {
+        display: flex !important;
+        width: 70% !important;
+        margin: 0 auto;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        @include breakpoint('medium') {
+            flex-direction: row;
+        }
+    }
+    
+    .testimonial {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .testimonial-img {
+        width: 150px;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    .testimonial-name {
+        color: #58595B;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+
+    .testimonial-description {
+        color: #58595B;
+        font-size: 16px;
+        font-weight: 300;
+        text-align: center;
+    }
+}
+
+.Questions {
+    padding: 60px 10% 40px;
+    background: linear-gradient(90deg, #32A8FB 0%, #1DE4CC 100%);
+    text-align: center;
+    .description {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        color: white;
+        max-width: 700px;
+        margin: 0 auto 30px;
+        font-weight: 300;
+        text-align: center;
+    }
+}
+
+.StartCoaching {
+    padding: 40px 10%;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    flex-direction: column;
+    align-items: center;
+
+    @include breakpoint('medium') {
+        flex-direction: row;
+    }
+
+    .left-column {
+        width: 90%;
+        align-self: center;
+        text-align: center;
+        @include breakpoint('medium') {
+            text-align: left;
+            width: 30%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+            
+            @include breakpoint('medium') {
+                margin-bottom: 40px;
+                text-align: left;
+            }
+        }
+    }
+
+    .right-column {
+        width: 90%;
+        display: none;
+        @include breakpoint('medium') {
+            display: block;
+            width: 60%;
+        }
+        figure, img {
+            margin: 0;
+        }
+    }
+}

@@ -45,7 +45,11 @@ class BecomeACoach extends React.Component {
   render() {
     const { testimonials, coachPage, footer, loading } = this.state
     let page = (
-      <Layout>
+      <Layout
+        title="Become a Coach"
+        description="Description Become a Coach"
+        keywords="Bible, Coach"
+      >
         <BackgroundContainer 
           {...coachPage}
         />

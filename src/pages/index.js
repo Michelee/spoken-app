@@ -38,11 +38,13 @@ class IndexPage extends Component {
 
   render () {
     const { homeContent, testimonialsItems, footerContent } = this.state;
-    console.log(testimonialsItems);
     return (
       <Fragment>
         <Header />
-        <Layout>
+        <Layout
+          description="Bible School"
+          keywords="Bible, Spoken App"
+        >
           <MainSection {...homeContent} />
           <OverviewSection {...homeContent} />
           <TestimonialsSection

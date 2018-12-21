@@ -6,23 +6,28 @@ import Logo from '../icons/logo'
 
 import '../../styles/components/ui/_footer.scss'
 
-const Footer = () => (
+const Footer = ({ contactTitle, footer }) => (
   <div className="footer">
     <div className="contact-container">
-      <h2>Let’s keep in touch</h2>
-
+      <h2>{contactTitle}</h2>
       <div className="contact-form">
         <input type="text" placeholder="Enter your email to subscribe" />
         <button>Submit</button>
       </div>
     </div>
     <div className="inline-text">
-      <small>All Rights Reserved By WBS. ORG</small>
+      <small>{footer.copyright}</small>
       <Logo />
       <div className="social-media">
-        <FacebookIcon />
-        <InstagramIcon />
-        <TwitterIcon />
+        <a href={footer.facebook}>
+          <FacebookIcon />
+        </a>
+        <a href={footer.instagram}>
+          <InstagramIcon />
+        </a>
+        <a href={footer.twitter}>
+          <TwitterIcon />
+        </a>
       </div>
     </div>
   </div>    

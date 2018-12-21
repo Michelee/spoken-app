@@ -77,7 +77,7 @@
 
     small,
     .social-media {
-      width: 168px;
+      width: 200px;
     }
 
     .social-media {
@@ -86,6 +86,8 @@
       align-items: center;
       svg {
         margin-left: 0.5em;
+        width: 24px;
+        height: auto;
       }
     }
 

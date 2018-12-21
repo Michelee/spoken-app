@@ -23,13 +23,13 @@
     }
 
     .logo {
-        width: 150px;
+        width: 100px;
 
         svg {
             width: 100%;
         }
         @include breakpoint('medium') {
-            width: 193px;
+            width: 150px;
         }
     }
 }

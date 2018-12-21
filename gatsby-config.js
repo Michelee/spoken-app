@@ -3,13 +3,6 @@ module.exports = {
     title: 'Spoken App',
   },
   plugins: [
-    {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: '9ph3glql7ljh',
-        accessToken: '0841982f30f938f230bcae9f4c3e6f07a17516b8a71eff3221543c56e51313de'
-      }
-    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {

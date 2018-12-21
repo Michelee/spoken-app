@@ -1,19 +1,23 @@
 import React from 'react'
 import Slider from './slider'
-import TestimonialsContainer from './testimonialsContainer'
-import _ from 'lodash'
+import Testimonial from './testimonial'
 
 const CoachesTestimonials = ({testimonials, testimonialsTitle = ''}) => {
-  const items = _.chunk(testimonials, 3)
   return (
     <section className="CoachesTestimonials">
       <h2 className="section-title">{testimonialsTitle}</h2>
-      <Slider 
-      >
+      <div className="testimonials-container">
         {
-          items.map((page, index) => <TestimonialsContainer testimonialsPage={page} key={index}/>)
+          testimonials.length ? <Slider 
+          >
+            {
+              testimonials.map(({ fields }, index) => <Testimonial {...fields} key={index}/>)
+            }
+          </Slider>
+          : ''
         }
-      </Slider>
+        
+      </div>
     </section>
   )}
 
